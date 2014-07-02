@@ -2,9 +2,17 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>じゃんけんゲーム（ローカル版） | VOYAGE Tech Dojo</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap theme -->
+<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+<title>じゃんけんゲーム（ローカル版） | VG Tech Dojo</title>
+
 <style type="text/css">
  body {
   padding-top: 60px;
@@ -14,7 +22,6 @@
   padding: 9px 0;
  }
 </style>
-<link href="css/bootstrap-responsive.css" rel="stylesheet">
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -22,13 +29,14 @@
 <![endif]-->
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <a class="brand" href="#">VG-Tech-Dojo</a>
-            </div>
+     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">VG-Tech-Dojo</a>
         </div>
+      </div>
     </div>
+
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="content-header">
@@ -36,30 +44,30 @@
             </div>
         </div>
             <hr />
-        <div class="row-fluid">
-        <div class="span5">
-            <div class="row-fluid text-center">
+        <div class="row">
+        <div class="col-sm-6">
+            <div class="row text-center">
                 <button type="button" class="btn rsp-btn" id="rock">グー</button>
                 <button type="button" class="btn rsp-btn" id="scissors">チョキ</button>
                 <button type="button" class="btn rsp-btn" id="paper">パー</button>
             </div>
             <hr />
-            <div class="row-fluid">
-                <div class="span6 text-center">
+            <div class="row">
+                <div class="col-sm-6 text-center">
                     <p>あなた</p>
                     <img id="myrspimg" src="img/rock.png" />
                 </div>
-                <div class="span6 text-center">
+                <div class="col-sm-6 text-center">
                     <p>ボブ</p>
                     <img id="bobrspimg" src="img/scissors.png" />
                 </div>
             </div>
             <hr />
-            <div class="row-fluid">
+            <div class="row">
                 <p id="result" class="text-center">Who will win?</p>
             </div>
         </div>
-        <div class="span7">
+        <div class="col-sm-6">
             <div class="well sidebar-nav">
                 <ul class="nav nav-list">
                     <li class="nav-header">じゃんけんゲーム</li>
