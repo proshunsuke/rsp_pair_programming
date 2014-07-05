@@ -1,6 +1,5 @@
-"use strict";
-
 $(function(){
+  "use strict";
   var HAND_TYPE = {
     ROCK : 0,
     SCISSORS : 1,
@@ -48,9 +47,7 @@ $(function(){
     var result;
     if (myHand === otherHand) {
       result = RSP_RESULT_CODE.DRAW;
-    } else if ((myHand === HAND_TYPE.ROCK && otherHand === HAND_TYPE.SCISSORS)
-        || (myHand === HAND_TYPE.SCISSORS && otherHand === HAND_TYPE.PAPER)
-        || (myHand === HAND_TYPE.PAPER && otherHand === HAND_TYPE.ROCK)) {
+    } else if ((myHand === HAND_TYPE.ROCK && otherHand === HAND_TYPE.SCISSORS) || (myHand === HAND_TYPE.SCISSORS && otherHand === HAND_TYPE.PAPER) || (myHand === HAND_TYPE.PAPER && otherHand === HAND_TYPE.ROCK)) {
       result = RSP_RESULT_CODE.WIN;
     }else {
       result = RSP_RESULT_CODE.LOSE;
