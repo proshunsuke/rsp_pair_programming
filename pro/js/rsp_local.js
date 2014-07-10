@@ -4,6 +4,8 @@ $(function(){
     var loseCount = 0;
     var drawCount = 0;
 
+    var startflag = false;
+
     "use strict";
     var HAND_TYPE = {
         ROCK : 0,
@@ -16,14 +18,22 @@ $(function(){
         LOSE : 2,
     };
 
-    $(".rsp-btn").click(function(){
-        var bobhand = bobHand();
-        var result = judge(
-            myHand($(this).attr("id")),
-            bobhand
-        );
+    $("#start").click(function(){
+        $("#te").show();
+        $("#janken").show();
+        startflag = true;
+    });
 
-        showResult(result,myHand($(this).attr("id")),bobhand);
+    $(".rsp-btn").click(function(){
+        if(startflag){
+            var bobhand = bobHand();
+            var result = judge(
+                myHand($(this).attr("id")),
+                bobhand
+            );
+
+            showResult(result,myHand($(this).attr("id")),bobhand);
+        }
     });
     function myHand(handType) {
         var hand;
